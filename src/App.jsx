@@ -1,9 +1,12 @@
-import './App.css'
+import './App.css';
 
 function App() {
   return (
     <div>
-      Hello world
+      <i className='bx bx-search'></i>
+      <i className='bx bxs-chevron-down'></i>
+      <i className='bx bx-arrow-back'></i>
+      <i className='bx bx-moon'></i>
     </div>
   )
 }
