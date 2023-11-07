@@ -53,5 +53,23 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
     font-family: var(--ff-main);
     font-size: var(--fz-home-page);
+    height: 100vh;
+}
+
+.container {
+    max-width: 1280px;
+    width: 90%;
+    margin-inline: auto;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }
 

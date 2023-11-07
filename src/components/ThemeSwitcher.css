@@ -1,0 +1,8 @@
+.btn-dark-mode {
+    gap: .5rem;
+    color: var(--clr-text);
+}
+
+.btn-dark-mode:hover {
+    opacity: .7;
+}
