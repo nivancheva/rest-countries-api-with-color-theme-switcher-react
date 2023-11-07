@@ -48,6 +48,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --clr-background: var(--clr-bg-dark-blue);
     --clr-elements: var(--clr-very-dark-blue);
     --clr-text: var(--clr-white);
+    --clr-input: var(--clr-white);
 }
 
 body {

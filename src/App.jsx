@@ -1,12 +1,15 @@
 import './App.css';
 import Header from './components/Header';
+import Search from './components/Search';
 
 function App() {
   return (
     <div>
       <Header />
 
-      <i className='bx bx-search'></i>
+      <Search />
+
+      
       <i className='bx bxs-chevron-down'></i>
       <i className='bx bx-arrow-back'></i>
     </div>

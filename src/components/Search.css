@@ -1,0 +1,41 @@
+.input {
+    position: relative;
+    color: var(--clr-input);
+}
+
+.search-country {
+    padding-block: 1.125rem;
+    padding-left: 4.625rem;
+    width: 100%;
+    border-radius: .5rem;
+    border: 0;
+    background-color: var(--clr-elements);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    outline: 0;
+}
+
+::placeholder {
+    color: var(--clr-input);
+}
+
+.bx-search {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translate(2rem, 50%);
+    font-size: 1.125rem;
+}
+
+.margin-block-3 {
+    margin-block: 1.5rem;
+}
+
+@media (min-width: 800px) {
+    .search-country {
+        width: 35%;
+    }
+
+    .margin-block-3 {
+        margin-block: 3rem;
+    }
+}
