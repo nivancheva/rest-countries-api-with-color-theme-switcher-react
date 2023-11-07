@@ -30,6 +30,16 @@
     margin-block: 1.5rem;
 }
 
+.errors {
+    position: absolute;
+    bottom: -50%;
+    color: red;
+}
+
+.inputIfError {
+    outline: 1px solid red;
+}
+
 @media (min-width: 800px) {
     .search-country {
         width: 35%;
