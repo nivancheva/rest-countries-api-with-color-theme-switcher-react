@@ -1,0 +1,14 @@
+.grid {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    color: var(--clr-text);
+}
+
+@media (min-width:800px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4.6875rem;
+        margin-top: 3rem;
+    }
+}

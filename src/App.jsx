@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Search from './components/Search';
 import DropdownMenu from './components/DropDownMenu';
+import CountriesContainer from './components/CountriesContainer';
 
 
 function App() {
@@ -53,8 +54,10 @@ function App() {
 
           <DropdownMenu />
         </div>
+
+        <CountriesContainer />
         
-        <i className='bx bx-arrow-back'></i>
+        {/* <i className='bx bx-arrow-back'></i> */}
       </div>
     </div>
   )
