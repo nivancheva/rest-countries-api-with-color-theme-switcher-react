@@ -54,7 +54,6 @@ function App() {
           <DropdownMenu />
         </div>
         
-        <i className='bx bxs-chevron-down'></i>
         <i className='bx bx-arrow-back'></i>
       </div>
     </div>

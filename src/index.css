@@ -67,10 +67,16 @@ button {
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 .flex {
     display: flex;
     align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
