@@ -17,8 +17,8 @@ export default function Search({ onSearch }) {
     }
 
     return (
-        <div className='margin-block-3'>
-            <form onSubmit={handleSubmit(getCountry)} className='input container'>
+        <div className='padding-block-3'>
+            <form onSubmit={handleSubmit(getCountry)} className='input'>
                 <input 
                     {...register("country")}
                     className={`search-country${errors.country?.message ? " inputIfError" : ""}`}

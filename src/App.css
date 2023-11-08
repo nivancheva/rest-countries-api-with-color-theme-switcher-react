@@ -1,0 +1,12 @@
+.bg-main-page {
+    background-color: var(--clr-background);
+}
+
+@media (min-width:800px) {
+    .search-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+

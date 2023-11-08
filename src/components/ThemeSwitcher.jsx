@@ -7,7 +7,7 @@ export default function ThemeSwitcher() {
 
     return (
         <button className='flex btn-dark-mode' onClick={toggleDarkMode}>
-            <i className='bx bx-moon'></i>
+            <i className='bx bxs-moon'></i>
             <p>Dark Mode</p>
         </button>
     )

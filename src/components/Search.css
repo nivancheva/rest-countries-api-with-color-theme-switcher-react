@@ -26,8 +26,8 @@
     font-size: 1.125rem;
 }
 
-.margin-block-3 {
-    margin-block: 1.5rem;
+.padding-block-3 {
+    padding-block: 1.5rem;
 }
 
 .errors {
@@ -41,11 +41,11 @@
 }
 
 @media (min-width: 800px) {
-    .search-country {
-        width: 35%;
+    .padding-block-3 {
+        padding-block: 3rem;
     }
 
-    .margin-block-3 {
-        margin-block: 3rem;
+    .search-country {
+        padding-right: 16.875rem;
     }
 }
