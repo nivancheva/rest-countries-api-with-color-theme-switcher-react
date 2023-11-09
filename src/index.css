@@ -55,6 +55,7 @@ body {
     font-family: var(--ff-main);
     font-size: var(--fz-home-page);
     height: 100vh;
+    line-height: 1.5;
 }
 
 .container {
