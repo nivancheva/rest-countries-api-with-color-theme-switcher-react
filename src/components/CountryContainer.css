@@ -1,0 +1,43 @@
+.grid {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    color: var(--clr-text);
+}
+
+.flag-img {
+    width: 100%;
+    aspect-ratio: 2;
+    object-fit: cover;
+}
+
+.card {
+    background-color: var(--clr-elements);
+    color: var(--clr-text);
+    padding: 1.5rem 0 2.875rem 1.5rem;
+    margin-inline: auto;
+    width: 100%;
+}
+
+.card_country {
+    font-size: 1.125rem;
+    font-weight: var(--fw-extra-bold);
+    margin-bottom: 1rem;
+}
+
+.card-data {
+    font-weight: var(--fw-bold);
+}
+
+.card-data span {
+    font-weight: var(--fw-light);
+}
+
+@media (min-width:800px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, 263px);
+        justify-content: space-between;
+        gap: 4.6875rem;
+        margin-top: 3rem;
+    }
+}
