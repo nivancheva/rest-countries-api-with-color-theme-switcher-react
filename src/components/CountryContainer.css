@@ -5,6 +5,10 @@
     color: var(--clr-text);
 }
 
+.wrapper {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .flag-img {
     width: 100%;
     aspect-ratio: 2;
@@ -27,6 +31,8 @@
 
 .card-data {
     font-weight: var(--fw-bold);
+    border-radius: .5rem;
+    overflow: hidden;
 }
 
 .card-data span {

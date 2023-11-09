@@ -2,7 +2,7 @@ import './CountryContainer.css';
 
 export default function CountryContainer( {country} ) {
     return (
-        <div>
+        <div className='wrapper'>
             <div className='card-data'>
                 <img className='flag-img' src={country.flags.svg} />
                 <div className='card'>
