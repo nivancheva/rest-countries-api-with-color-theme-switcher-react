@@ -2,18 +2,23 @@ import './DropdownMenu.css';
 import { useState } from 'react';
 
 const regions= [
-    {text:'Africa', url:'#'},
-    {text:'America', url:'#'},
-    {text:'Asia', url:'#'},
-    {text:'Europe', url:'#'},
-    {text:'Oceania', url:'#'}
+    {text:'Africa', value:'africa'},
+    {text:'America', value:'america'},
+    {text:'Asia', value:'asia'},
+    {text:'Europe', value:'europe'},
+    {text:'Oceania', value:'oceania'}
 ]
 
-export default function DropdownMenu() {
+export default function DropdownMenu({ onSelected }) {
     const [menuVisible, setMenuVisible] = useState(false);
 
     function toggleMenu() {
         setMenuVisible(!menuVisible);
+    }
+
+    function onRegionClick(region) {
+        setMenuVisible(false);
+        onSelected(region.value);
     }
 
     return (
@@ -26,7 +31,7 @@ export default function DropdownMenu() {
             <ul className={`regions ${menuVisible ? "" : "regions-hidden"}`}>
                 {regions.map((region, idx) => {
                     return (
-                        <li key={idx}>{region.text}</li>
+                        <li key={idx} onClick={() => onRegionClick(region)}>{region.text}</li>
                     )
                 })}
             </ul>
