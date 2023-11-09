@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Search from './components/Search';
-import DropdownMenu from './components/DropDownMenu';
-import CountryContainer from './components/CountryContainer';
+import MainView from './components/MainView';
 
 
 function App() {
 
   const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   async function searchCountry(country) {
     await getCountries(`https://restcountries.com/v3.1/name/${country}`);
@@ -39,6 +38,14 @@ function App() {
     searchCountry(country);
   }
 
+  function handleClick(country) {
+    setSelectedCountry(country);
+  }
+
+  function handleBack() {
+    setSelectedCountry(null);
+  }
+
   useEffect(function() {
     getAllCountries();
   }, []);
@@ -49,24 +56,14 @@ function App() {
 
       <div className='bg-main-page'>
 
+        {selectedCountry
+          ?
+          <p country={selectedCountry} onBackClick={handleBack}>das</p>
+          :
+          <MainView handleSubmit={handleSubmit} countries={countries} handleClick={handleClick}/>
+        }
 
 
-        <div className='search-section container'>
-          <Search onSearch={handleSubmit}/>
-
-          <DropdownMenu />
-        </div>
-
-        <div className='grid container'>
-          {countries.map((country, idx) => {
-            return (
-              <CountryContainer key={idx} country={country}/>
-            )
-          })}
-        </div>
-        
-        
-        
         {/* <i className='bx bx-arrow-back'></i> */}
       </div>
     </div>
