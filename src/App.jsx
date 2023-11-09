@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import MainView from './components/MainView';
+import CountryDetails from './components/CountryDetails';
 
 
 function App() {
@@ -58,13 +59,11 @@ function App() {
 
         {selectedCountry
           ?
-          <p country={selectedCountry} onBackClick={handleBack}>das</p>
+          <CountryDetails country={selectedCountry} onBackClick={handleBack}/>
           :
           <MainView handleSubmit={handleSubmit} countries={countries} handleClick={handleClick}/>
         }
 
-
-        {/* <i className='bx bx-arrow-back'></i> */}
       </div>
     </div>
   )
