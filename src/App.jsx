@@ -7,7 +7,6 @@ import getCountries from './helpers/getCountries';
 
 
 function App() {
-
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -35,6 +34,12 @@ function App() {
     setSelectedCountry(null);
   }
 
+  async function onRegionSelected(region) {
+    const result = await getCountries(`https://restcountries.com/v3.1/region/${region}`);
+
+    setCountries(result);
+  }
+
   useEffect(function() {
     getAllCountries();
   }, []);
@@ -49,7 +54,7 @@ function App() {
           ?
           <CountryDetails country={selectedCountry} onBackClick={handleBack}/>
           :
-          <MainView handleSubmit={handleSubmit} countries={countries} handleClick={handleClick}/>
+          <MainView handleSubmit={handleSubmit} countries={countries} handleClick={handleClick} onRegionSelected={onRegionSelected}/>
         }
 
       </div>

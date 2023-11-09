@@ -2,7 +2,7 @@ import Search from '../components/Search';
 import DropdownMenu from '../components/DropDownMenu';
 import CountryContainer from '../components/CountryContainer';
 
-export default function MainView( {handleSubmit, countries, handleClick} ) {
+export default function MainView( {handleSubmit, countries, handleClick, onRegionSelected} ) {
 
     function detailsCountry(country) {
         handleClick(country)
@@ -13,7 +13,7 @@ export default function MainView( {handleSubmit, countries, handleClick} ) {
             <div className='search-section container'>
                 <Search onSearch={handleSubmit}/>
 
-                <DropdownMenu />
+                <DropdownMenu onSelected={onRegionSelected} />
                 </div>
 
                 <div className='grid container'>

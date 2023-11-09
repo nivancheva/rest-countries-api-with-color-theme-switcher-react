@@ -10,6 +10,7 @@
     border-radius: .5rem;
     border: 0;
     background-color: var(--clr-elements);
+    color: var(--clr-input);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     outline: 0;
 }
