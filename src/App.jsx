@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Search from './components/Search';
 import DropdownMenu from './components/DropDownMenu';
-import CountriesContainer from './components/CountriesContainer';
+import CountryContainer from './components/CountryContainer';
 
 
 function App() {
@@ -49,13 +49,23 @@ function App() {
 
       <div className='bg-main-page'>
 
+
+
         <div className='search-section container'>
           <Search onSearch={handleSubmit}/>
 
           <DropdownMenu />
         </div>
 
-        <CountriesContainer />
+        <div className='grid container'>
+          {countries.map((country, idx) => {
+            return (
+              <CountryContainer key={idx} country={country}/>
+            )
+          })}
+        </div>
+        
+        
         
         {/* <i className='bx bx-arrow-back'></i> */}
       </div>
